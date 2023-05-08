@@ -6,7 +6,7 @@ const doc = {
       title: 'My API',
       description: 'Тестовое задание: API для приложения',
     },
-    host: 'localhost:3000',
+    host: process.env.SWAGGER_HOST,
     schemes: ['http'],
   };
 
