@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "gen": "node ./swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -23,10 +24,13 @@
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.31.1",
+    "swagger-autogen": "^2.23.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.14.6",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
   }
 }

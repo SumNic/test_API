@@ -15,6 +15,9 @@ const generateAccessToken = (id) => {
 class AuthController {
 
     async registration(req, res) {
+
+        // #swagger.summary = 'Регистрация пользователя'
+
         try {
             const errors = validationResult(req);
             if(!errors.isEmpty()) {
@@ -42,6 +45,9 @@ class AuthController {
     }
 
     async login(req, res) {
+
+        // #swagger.summary = 'Авторизация пользователя с получением JWT токена'
+
         try {
             const {username, password} = req.body;
             const user = await User.findOne({
@@ -65,6 +71,9 @@ class AuthController {
     }
 
     async getUser(req, res) {
+
+        // #swagger.summary = 'Получение списка всех пользователей'
+
         const users = await User.findAll();
         return res.json(users);
 

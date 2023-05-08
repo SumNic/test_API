@@ -10,8 +10,7 @@ const Message = db.define('messages',
       allowNull: false
     },
     message: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING, 
     },
     files: {
       type: DataTypes.STRING,

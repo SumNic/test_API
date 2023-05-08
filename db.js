@@ -2,7 +2,7 @@ require('dotenv').config();
 const Sequilize = require('sequelize');
 
 module.exports = new Sequilize('node_db', 'postgres', process.env.PASS, {
-  host: 'postgres',
+  host: process.env.POSTGRES_HOST,
   dialect: 'postgres',
   operatorsAliases: 0,
   pool: {

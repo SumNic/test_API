@@ -7,6 +7,7 @@ class FilesController {
 
     async createFile(file) {
         try {
+            if (!file) return null;
             const fileName = uuid.v4() + '.' + file.name.split('.').reverse()[0];
             const filePath = path.resolve(__dirname, '..', 'static');
             if (!fs.existsSync(filePath)) {
