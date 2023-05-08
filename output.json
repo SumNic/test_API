@@ -79,26 +79,6 @@
         }
       }
     },
-    "/api/users": {
-      "get": {
-        "tags": [
-          "Пользователи"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "403": {
-            "description": "Forbidden"
-          }
-        }
-      }
-    },
     "/api/message": {
       "post": {
         "tags": [
