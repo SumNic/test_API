@@ -23,6 +23,7 @@ app.use('/api', authRouter
 app.use('/api', messagesRouter
 // #swagger.tags = ['Сообщения']
 );
+app.use(express.static('static'));
 
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

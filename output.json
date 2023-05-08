@@ -5,7 +5,7 @@
     "description": "Тестовое задание: API для приложения",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "91.107.143.104:3000",
   "basePath": "/",
   "schemes": [
     "http"
