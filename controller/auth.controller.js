@@ -69,15 +69,6 @@ class AuthController {
             res.status(400).json({message: 'Registration error'});
         } 
     }
-
-    async getUser(req, res) {
-
-        // #swagger.summary = 'Получение списка всех пользователей'
-
-        const users = await User.findAll();
-        return res.json(users);
-
-    }
 }
 
 module.exports = new AuthController();

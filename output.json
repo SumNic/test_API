@@ -84,7 +84,6 @@
         "tags": [
           "Пользователи"
         ],
-        "summary": "Получение списка всех пользователей",
         "description": "",
         "parameters": [
           {
@@ -94,9 +93,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "403": {
             "description": "Forbidden"
           }
