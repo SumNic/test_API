@@ -18,6 +18,8 @@ class AuthController {
 
         // #swagger.summary = 'Регистрация пользователя'
 
+        
+
         try {
             const errors = validationResult(req);
             if(!errors.isEmpty()) {
@@ -42,6 +44,17 @@ class AuthController {
             console.log(e);
             res.status(400).json({message: 'Registration error'});
         }
+        /* #swagger.responses[200] = {
+            description: 'Пользователь успешно зарегистрирован.',
+            schema: 
+                {
+                    "id": 5,
+                    "username": "anyss",
+                    "password": "$2a$07$ME8/v/unjnKRJg65d8Jw0u9oOheC8X.wrf.HLwKvVnDvB2CgmOmBO",
+                    "updatedAt": "2023-05-09T12:02:32.242Z",
+                    "createdAt": "2023-05-09T12:02:32.242Z"
+                }
+        } */
     }
 
     async login(req, res) {
@@ -68,6 +81,13 @@ class AuthController {
             console.log(e);
             res.status(400).json({message: 'Registration error'});
         } 
+        /* #swagger.responses[200] = {
+            description: 'Пользователь авторизован.',
+            schema: 
+                {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjgzNjMzODUzLCJleHAiOjE2ODM3MjAyNTN9.qqAMefPEKsSlODnbHpaX86tali_08wMmYU3coDvNMhU"
+                }
+        } */
     }
 }
 

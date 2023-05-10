@@ -41,6 +41,18 @@ class MessagesController {
             console.log(e);
             res.status(400).json({message: 'Ошибка при сохранении сообщения'});
         }
+        /* #swagger.responses[200] = {
+            description: 'Сообщение отправлено.',
+            schema: 
+                {
+                    "id": 8,
+                    "message": "text",
+                    "files": "7fe18ba7-6b67-4cc2-8507-0d535d8c02e3.jpeg",
+                    "userId": 4,
+                    "updatedAt": "2023-05-09T12:07:56.273Z",
+                    "createdAt": "2023-05-09T12:07:56.273Z"
+                }
+        } */
     }
 
     async getMessages(req, res) {
@@ -52,6 +64,18 @@ class MessagesController {
         const offsetVal = (page - 1) * limitVal;
         const messages = await Message.findAll({ offset: offsetVal, limit: limitVal });
             return res.json(messages);
+        /* #swagger.responses[200] = {
+            description: 'Сообщение отправлено.',
+            schema: 
+                {
+                    "id": 8,
+                    "message": "text",
+                    "files": "7fe18ba7-6b67-4cc2-8507-0d535d8c02e3.jpeg",
+                    "userId": 4,
+                    "updatedAt": "2023-05-09T12:07:56.273Z",
+                    "createdAt": "2023-05-09T12:07:56.273Z"
+                }
+        } */
     }
     
     async updateMessage(req, res) {
@@ -99,6 +123,18 @@ class MessagesController {
             console.log(e);
             res.status(400).json({message: 'Ошибка при редактировании сообщения'});
         }
+        /* #swagger.responses[200] = {
+            description: 'Сообщение отправлено.',
+            schema: 
+                {
+                    "id": 8,
+                    "message": "text",
+                    "files": "7fe18ba7-6b67-4cc2-8507-0d535d8c02e3.jpeg",
+                    "userId": 4,
+                    "updatedAt": "2023-05-09T12:07:56.273Z",
+                    "createdAt": "2023-05-09T12:07:56.273Z"
+                }
+        } */
     }
     async deleteMessage(req, res) {
 
@@ -121,6 +157,13 @@ class MessagesController {
             console.log(e);
             res.status(400).json({message: 'Ошибка при удалении файла'});
         }
+        /* #swagger.responses[200] = {
+            description: 'Сообщение отправлено.',
+            schema: 
+                {
+                    "message": "Сообщение удалено"
+                }
+        } */
     }
 }
 
